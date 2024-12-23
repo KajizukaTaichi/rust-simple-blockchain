@@ -11,9 +11,9 @@ fn main() {
     log::info!("{:?}", blockchain.chain[0]);
 
     // Add blocks
-    blockchain.add_block("First block".to_string());
-    blockchain.add_block("Second block".to_string());
-    blockchain.add_block("Third block".to_string());
+    blockchain.add_block("First block".to_string()).unwrap();
+    blockchain.add_block("Second block".to_string()).unwrap();
+    blockchain.add_block("Third block".to_string()).unwrap();
 
     // print the blockchain
     for block in &blockchain.chain {
