@@ -4,6 +4,8 @@ mod blockchain;
 use blockchain::Blockchain;
 
 fn main() {
+    println!("国家に支配され無い **完全に自由なアナキスト経済圏建設** に向けた実験プロジェクト");
+
     pretty_env_logger::init();
 
     // create a new blockchain
