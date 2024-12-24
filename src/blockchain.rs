@@ -13,7 +13,7 @@ impl Blockchain {
     }
 
     pub fn add_block(&mut self, data: String) -> Option<()> {
-        let previous_block = self.chain.last().unwrap();
+        let previous_block = self.chain.last()?;
         let new_block = Block::new(previous_block.index + 1, previous_block.hash.clone(), data);
 
         if new_block.is_valid(previous_block) {
